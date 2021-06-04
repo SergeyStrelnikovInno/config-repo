@@ -1,0 +1,40 @@
+spring:
+    flyway:
+        url: jdbc:postgresql://10.203.92.253:5432/doc_storage_db
+        user: postgres
+        password: postgres
+        enabled: true
+        locations: classpath:database/migration
+        baseline-on-migrate: true
+        schemas: public
+    datasource:
+        username: postgres
+        password: postgres
+        url: jdbc:postgresql://10.203.92.253:5432/doc_storage_db
+        driver-class-name: org.postgresql.Driver
+
+logging:
+    file:
+        name: doc-search.log
+    level:
+        org:
+            zalando:
+                logbook: trace
+logbook:
+    include:
+        - /**
+    #  exclude:
+    #    - /admin-panel/**
+    filter.enabled: true
+    format.style: json
+    strategy: default
+    obfuscate:
+        headers:
+            - postman-token
+            - Authorization
+            - X-Secret
+        parameters:
+            - access_token
+            - password
+    write:
+        chunk-size: 1000
