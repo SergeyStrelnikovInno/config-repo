@@ -4,7 +4,7 @@ spring:
         user: postgres
         password: postgres
         enabled: true
-        locations: classpath:database/migration/docstorage
+        locations: classpath:/database/migration/
         baseline-on-migrate: true
         schemas: public
     datasource:
