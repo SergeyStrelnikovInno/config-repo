@@ -1,0 +1,39 @@
+spring:
+    mail:
+        host: smtp.yandex.ru
+        username: doc-search-help@yandex.ru
+        password: cbaudmbluwbckvvw
+        port: 465
+        protocol: smtps
+
+mail:
+    debug: true
+
+password-reset:
+    expiration-time: 36000000
+
+logging:
+    file:
+        name: doc-search.log
+    level:
+        org:
+            zalando:
+                logbook: trace
+logbook:
+    include:
+        - /**
+    #  exclude:
+    #    - /admin-panel/**
+    filter.enabled: true
+    format.style: json
+    strategy: default
+    obfuscate:
+        headers:
+            - postman-token
+            - Authorization
+            - X-Secret
+        parameters:
+            - access_token
+            - password
+    write:
+        chunk-size: 1000
