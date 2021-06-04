@@ -10,7 +10,7 @@ spring:
     datasource:
         username: postgres
         password: postgres
-        jdbc-url: jdbc:postgresql://10.203.92.253:5432/pg_keycloak
+        url: jdbc:postgresql://10.203.92.253:5432/pg_keycloak
         driver-class-name: org.postgresql.Driver
     mail:
         host: smtp.yandex.ru
