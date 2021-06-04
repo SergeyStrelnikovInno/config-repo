@@ -9,9 +9,6 @@ spring:
 mail:
     debug: true
 
-password-reset:
-    expiration-time: 36000000
-
 logging:
     file:
         name: doc-search.log
