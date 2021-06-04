@@ -1,13 +1,17 @@
 spring:
     flyway:
-        url: jdbc:postgresql://10.203.92.253:5432/doc_storage_db
+        url: jdbc:postgresql://10.203.92.253:5432/pg_keycloak
         user: postgres
         password: postgres
         enabled: true
-        locations: classpath:database/migration/docstorage
+        locations: classpath:/database/migration/
         baseline-on-migrate: true
         schemas: public
-
+    datasource:
+        username: postgres
+        password: postgres
+        jdbc-url: jdbc:postgresql://10.203.92.253:5432/pg_keycloak
+        driver-class-name: org.postgresql.Driver
     mail:
         host: smtp.yandex.ru
         username: doc-search-help@yandex.ru
@@ -31,20 +35,6 @@ keycloak:
     principal-attribute: preferred_username
     credentials:
         secret: 04aaadf3-97df-45c4-aa35-bbec7535ceeb
-
-keycloak-db:
-    datasource:
-        username: postgres
-        password: postgres
-        jdbc-url: jdbc:postgresql://10.203.92.253:5432/pg_keycloak
-        driver-class-name: org.postgresql.Driver
-
-docstorage:
-    datasource:
-        username: postgres
-        password: postgres
-        jdbc-url: jdbc:postgresql://10.203.92.253:5432/doc_storage_db
-        driver-class-name: org.postgresql.Driver
 
 admin:
     panel:
