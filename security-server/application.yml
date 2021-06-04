@@ -12,18 +12,6 @@ spring:
         password: postgres
         url: jdbc:postgresql://10.203.92.253:5432/pg_keycloak
         driver-class-name: org.postgresql.Driver
-    mail:
-        host: smtp.yandex.ru
-        username: doc-search-help@yandex.ru
-        password: cbaudmbluwbckvvw
-        port: 465
-        protocol: smtps
-
-mail:
-    debug: true
-
-password-reset:
-    expiration-time: 36000000
 
 keycloak:
     realm: docsearch
