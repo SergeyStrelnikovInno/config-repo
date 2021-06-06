@@ -1,0 +1,10 @@
+keycloak:
+  realm: docsearch
+  auth-server-url: http://localhost:9443/auth
+  ssl-required: external
+  resource: docsearch-app
+  use-resource-role-mappings: true
+  bearer-only: true
+  principal-attribute: preferred_username
+  credentials:
+    secret: 04aaadf3-97df-45c4-aa35-bbec7535ceeb
