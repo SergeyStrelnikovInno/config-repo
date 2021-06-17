@@ -10,7 +10,7 @@ spring:
     datasource:
         username: postgres
         password: postgres
-        url: jdbc:postgresql://10.203.92.253:5432/doc_storage_db
+        url: jdbc:postgresql://10.203.92.253:5432/doc_storage_db?currentSchema=app
         driver-class-name: org.postgresql.Driver
 
 logging:
