@@ -1,6 +1,6 @@
 spring:
     flyway:
-        url: jdbc:postgresql://localhost:5432/ds_keycloak_db
+        url: jdbc:postgresql://ds_keycloak_db:5432/ds_keycloak_db
         user: postgres
         password: postgres
         enabled: true
@@ -10,7 +10,7 @@ spring:
     datasource:
         username: postgres
         password: postgres
-        url: jdbc:postgresql://localhost:5432/ds_keycloak_db
+        url: jdbc:postgresql://ds_keycloak_db:5432/ds_keycloak_db
         driver-class-name: org.postgresql.Driver
 
 password-reset:
