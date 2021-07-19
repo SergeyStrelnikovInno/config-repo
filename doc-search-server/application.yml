@@ -1,6 +1,6 @@
 spring:
     flyway:
-        url: jdbc:postgresql://localhost:5433/ds_storage_db
+        url: jdbc:postgresql://ds_storage_db:5433/ds_storage_db
         user: postgres
         password: postgres
         enabled: true
@@ -10,7 +10,7 @@ spring:
     datasource:
         username: postgres
         password: postgres
-        url: jdbc:postgresql://localhost:5433/ds_storage_db
+        url: jdbc:postgresql://ds_storage_db:5433/ds_storage_db
         driver-class-name: org.postgresql.Driver
 
 logging:
